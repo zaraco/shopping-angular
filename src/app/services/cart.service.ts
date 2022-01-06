@@ -11,4 +11,16 @@ export class CartService {
     this.cart.push(product);
     console.log(this.cart)
   }
+
+  get(): Product[] {
+    return this.cart;
+  }
+
+  getCount(): number {
+    return this.cart.length
+  }
+
+  getPrice(): number {
+    return this.cart.map((product) => product.price).reduce((a, b) => a+b , 0)
+  }
 }
