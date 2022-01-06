@@ -1,4 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {CartService} from "../../services/cart.service";
+import {Product} from "../../types/product.type";
 
 @Component({
   selector: 'app-product-item',
@@ -6,11 +8,17 @@ import {Component, Input, OnInit} from '@angular/core';
   styleUrls: ['./product-item.component.scss']
 })
 export class ProductItemComponent implements OnInit {
-  @Input() price: number = 0;
-  @Input() title: string = '';
-  @Input() image: string = '';
+  @Input() product: Product | undefined;
 
-  constructor() { }
+  constructor(
+    private cartService: CartService
+  ) { }
+
+  addToCart() {
+    if (this.product) {
+      this.cartService.addToCart(this.product);
+    }
+  }
 
   ngOnInit(): void {
   }

@@ -1,9 +1,10 @@
 <div>
   <h2>
-    {{title}}
+    {{product?.title}}
   </h2>
   <p>
-    {{price}}
+    {{product?.price}}
   </p>
-  <img src="{{image}}">
+  <img src="{{product?.image}}">
+  <button (click)="addToCart()">Add to cart</button>
 </div>
