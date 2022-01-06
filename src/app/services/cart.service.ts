@@ -23,4 +23,8 @@ export class CartService {
   getPrice(): number {
     return this.cart.map((product) => product.price).reduce((a, b) => a+b , 0)
   }
+
+  removeAll() {
+    this.cart = []
+  }
 }

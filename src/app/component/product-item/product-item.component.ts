@@ -9,6 +9,7 @@ import {Product} from "../../types/product.type";
 })
 export class ProductItemComponent implements OnInit {
   @Input() product: Product | undefined;
+  @Input() hasButton: boolean = true;
 
   constructor(
     private cartService: CartService

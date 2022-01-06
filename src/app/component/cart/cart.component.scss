@@ -1,0 +1,48 @@
+$gray-dark: #5b5858;
+$gray-light: #9e9898;
+$gray-lighter: #bab4b4;
+$pink-light: #e8124b;
+
+.cart {
+  &__products {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__count {
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  &__total-price {
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  &__count-cart {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  &__router-link {
+    color: #5b5858;
+    cursor: pointer;
+    text-decoration: none;
+    &:hover {
+      color: $pink-light;
+    }
+  }
+  &__button {
+    cursor: pointer;
+    font-weight: bold;
+    background-color: $gray-lighter;
+    font-size: 14px;
+    border: none;
+    &:hover {
+      color: $pink-light;
+      background-color: $gray-lighter;
+    }
+  }
+}

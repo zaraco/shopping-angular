@@ -1,0 +1,31 @@
+$gray-dark: #5b5858;
+$gray-light: #9e9898;
+$gray-lighter: #bab4b4;
+$pink-light: #e8124b;
+
+.product-item {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin: 10px;
+
+  &__title {
+    padding: 5px 0;
+    margin: 0;
+  }
+  &__price {
+    color: $pink-light;
+  }
+  &__button {
+    padding: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: $gray-light;
+    font-size: 14px;
+    border: none;
+    &:hover {
+      color: $pink-light;
+      background-color: $gray-lighter;
+    }
+  }
+}

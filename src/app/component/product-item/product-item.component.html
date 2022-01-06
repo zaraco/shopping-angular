@@ -1,10 +1,10 @@
-<div>
-  <h2>
+<div class="product-item">
+  <h2 class="product-item__title">
     {{product?.title}}
   </h2>
-  <p>
-    {{product?.price}}
+  <p class="product-item__price">
+    {{product?.price}} $
   </p>
-  <img src="{{product?.image}}">
-  <button (click)="addToCart()">Add to cart</button>
+  <img src="{{product?.image}}" class="product-item__image">
+  <button (click)="addToCart()" *ngIf="hasButton" class="product-item__button">Add to cart</button>
 </div>
