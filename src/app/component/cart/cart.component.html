@@ -6,7 +6,7 @@
     <a routerLink="/" class="cart__router-link">Home</a>
   </p>
   <div class="cart__products">
-    <app-product-item *ngFor="let product of products" [product]="product" [hasButton]="false"></app-product-item>
+    <app-product-item *ngFor="let product of products" [product]="product" [hasButton]="false" (removeItemEvent)="removeItem($event)" [hasRemoveButton]="true"></app-product-item>
   </div>
   <button (click)="removeAll()" class="cart__button">Remove</button>
 </div>
