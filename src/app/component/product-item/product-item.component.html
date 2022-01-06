@@ -7,4 +7,5 @@
   </p>
   <img src="{{product?.image}}" class="product-item__image">
   <button (click)="addToCart()" *ngIf="hasButton" class="product-item__button">Add to cart</button>
+  <button (click)="removeItem()" *ngIf="hasRemoveButton">Remove from cart</button>
 </div>
