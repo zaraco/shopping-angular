@@ -1,30 +1,24 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {CartService} from "../../services/cart.service";
-import {Product} from "../../types/product.type";
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { CartService } from '../../services/cart.service';
+import { Product } from '../../types/product.type';
 
 @Component({
   selector: 'app-product-item',
   templateUrl: './product-item.component.html',
-  styleUrls: ['./product-item.component.scss']
+  styleUrls: ['./product-item.component.scss'],
 })
-export class ProductItemComponent implements OnInit {
+export class ProductItemComponent {
   @Input() product: Product | undefined;
   @Input() hasButton: boolean = true;
   @Input() hasRemoveButton: boolean = false;
   @Output() removeItemEvent = new EventEmitter<Product>();
 
-  constructor(
-    private cartService: CartService
-  ) {
-  }
+  constructor(private cartService: CartService) {}
 
   addToCart() {
     if (this.product) {
       this.cartService.addToCart(this.product);
     }
-  }
-
-  ngOnInit(): void {
   }
 
   removeItem() {

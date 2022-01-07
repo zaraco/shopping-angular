@@ -12,13 +12,10 @@ import { ProductItemComponent } from './component/product-item/product-item.comp
     AppComponent,
     CartComponent,
     HomeComponent,
-    ProductItemComponent
+    ProductItemComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

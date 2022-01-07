@@ -1,5 +1,5 @@
-import {Injectable} from "@angular/core";
-import {Product} from "../types/product.type";
+import { Injectable } from '@angular/core';
+import { Product } from '../types/product.type';
 
 @Injectable({
   providedIn: 'root',
@@ -9,7 +9,7 @@ export class CartService {
 
   addToCart(product: Product): void {
     this.cart.push(product);
-    console.log(this.cart)
+    console.log(this.cart);
   }
 
   get(): Product[] {
@@ -17,18 +17,18 @@ export class CartService {
   }
 
   getCount(): number {
-    return this.cart.length
+    return this.cart.length;
   }
 
   getPrice(): number {
-    return this.cart.map((product) => product.price).reduce((a, b) => a+b , 0)
+    return this.cart.map((product) => product.price).reduce((a, b) => a + b, 0);
   }
 
   removeAll() {
-    this.cart = []
+    this.cart = [];
   }
 
   removeItem(product: Product) {
-    this.cart = this.cart.filter((item) => item.id !== product.id)
+    this.cart = this.cart.filter((item) => item.id !== product.id);
   }
 }
