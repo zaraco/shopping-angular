@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { CartComponent } from './component/cart/cart.component';
 import { HomeComponent } from './component/home/home.component';
 import { ProductItemComponent } from './component/product-item/product-item.component';
+import { ProductDetailComponent } from './component/product-detail/product-detail.component';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { ProductItemComponent } from './component/product-item/product-item.comp
     CartComponent,
     HomeComponent,
     ProductItemComponent,
+    ProductDetailComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
