@@ -3,7 +3,7 @@
     {{ product?.title }}
   </h2>
   <p class="product-item__price">{{ product?.price }} $</p>
-  <a routerLink="/product/{{product?.id}}">
+  <a routerLink="/product/{{ product?.id }}">
     <img src="{{ product?.image }}" class="product-item__image" />
   </a>
   <button (click)="addToCart()" *ngIf="hasButton" class="product-item__button">
