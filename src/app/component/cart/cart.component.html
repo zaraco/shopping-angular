@@ -1,12 +1,18 @@
 <div class="cart">
-  <div class="cart__count"> Total products: {{ count }} </div>
-  <div class="cart__total-price"> Total price: {{ totalPrice }} $</div>
+  <div class="cart__count">Total products: {{ count }}</div>
+  <div class="cart__total-price">Total price: {{ totalPrice }} $</div>
   <p *ngIf="count === 0" class="cart__count-cart">
     Please add at least one product through
     <a routerLink="/" class="cart__router-link">Home</a>
   </p>
   <div class="cart__products">
-    <app-product-item *ngFor="let product of products" [product]="product" [hasButton]="false" (removeItemEvent)="removeItem($event)" [hasRemoveButton]="true"></app-product-item>
+    <app-product-item
+      *ngFor="let product of products"
+      [product]="product"
+      [hasButton]="false"
+      (removeItemEvent)="removeItem($event)"
+      [hasRemoveButton]="true"
+    ></app-product-item>
   </div>
   <button (click)="removeAll()" class="cart__button">Remove</button>
 </div>
