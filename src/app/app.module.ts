@@ -7,6 +7,7 @@ import { CartComponent } from './component/cart/cart.component';
 import { HomeComponent } from './component/home/home.component';
 import { ProductItemComponent } from './component/product-item/product-item.component';
 import { ProductDetailComponent } from './component/product-detail/product-detail.component';
+import { WishListComponent } from './component/wish-list/wish-list.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { ProductDetailComponent } from './component/product-detail/product-detai
     HomeComponent,
     ProductItemComponent,
     ProductDetailComponent,
+    WishListComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

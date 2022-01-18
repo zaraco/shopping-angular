@@ -9,6 +9,20 @@
   <button (click)="addToCart()" *ngIf="hasButton" class="product-item__button">
     Add to cart
   </button>
+  <button
+    (click)="addToWishList()"
+    *ngIf="!isProductInWishList()"
+    class="product-item__button"
+  >
+    Add to wish list
+  </button>
+  <button
+    (click)="removeFromWishList()"
+    *ngIf="isProductInWishList()"
+    class="product-item__button"
+  >
+    Remove from wish list
+  </button>
   <button (click)="removeItem()" *ngIf="hasRemoveButton">
     Remove from cart
   </button>
